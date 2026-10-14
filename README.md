@@ -1,6 +1,43 @@
-# Ante Research
+# ANTE research: indicators of gambling-related harm
 
-Notebooks, experiments, and model training for early prediction of addictive player behavior in responsible gambling.
+This is a research prototype for **human review** of potential gambling-related harm. It does not diagnose addiction, make account decisions, or claim to reduce harm. Payment-event summaries are descriptive; predictive evaluation requires permitted, defensible outcome labels.
+
+## Portfolio contents and evidence status
+
+This public README is the annotated contents page for the group portfolio. The course team number, members, roles and contribution shares are **pending confirmation**; no individual contribution is attributed here yet. Evidence links will be added as work is completed.
+
+| Area | Evidence and purpose | Current status |
+| --- | --- | --- |
+| Proposal | Group proposal, problem, initial research, scope, plan | Team-reviewed local draft; submission and team metadata pending |
+| Research protocol | [Question, data gate, point-in-time features and evaluation rules](docs/research_protocol.md) | Draft; no outcome labels confirmed |
+| Work plan | [Milestones, Gantt and risk register](docs/project_plan.md) | Draft; team and Moodle dates pending |
+| Data management | [Access, provenance, privacy and publication plan](docs/data_management_plan.md) | Draft; private data access not confirmed |
+| Data pipeline | [`ante/dataset.py`](ante/dataset.py), [`ante/payment_schema.py`](ante/payment_schema.py), [synthetic tests](tests/test_data.py) | Prototype; validates a prepared canonical CSV |
+| Feature pipeline | [`ante/features.py`](ante/features.py), [boundary tests](tests/test_features.py) | Prototype; 7/30-day payment counts and amounts |
+| Model and evaluation | [`ante/modeling`](ante/modeling), [synthetic tests](tests/test_modeling.py) | Working prototype; empirical evaluation pending permitted labels |
+| API and app | [Single local API endpoint](ante/api.py), [synthetic API tests](tests/test_api.py), [ante-app](https://github.com/ante-rg/ante-app) | API prototype works locally; separate UI pending |
+| Team process | [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), [iteration log](docs/iteration_log.md), review notes and feedback | Board exists; log is a blank template |
+| Final analysis | Results, failure cases, limitations and recommendations | Pending data and tests |
+
+**Team metadata:** team number `TBC`; names/roles `TBC`; verified contribution shares `TBC`. The team should record dated reviews and actual work before filling these fields. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
+
+## Reproducible prototype
+
+The canonical input is a prepared CSV with `event_id,player_id,event_time,event_type,amount,currency`. Timestamps must carry a UTC offset; `event_type` is `deposit` or `withdrawal`; amounts are positive. The source-specific mapping and permission decision must precede import of any external dataset.
+
+```sh
+make requirements
+.venv/bin/python -m ante.dataset --input-path data/raw/payment_events.csv --output-path data/processed/payment_events.csv
+.venv/bin/python -m ante.features --input-path data/processed/payment_events.csv --output-path data/processed/payment_features.csv --as-of 2026-10-15T00:00:00Z
+make lint
+make test
+```
+
+Individual-level outputs stay in ignored local `data/` paths. The current model prototype requires a **single-currency cohort** and independently supplied labels; a mixed-currency feature file must be split before training or prediction. See the [research protocol](docs/research_protocol.md) for the exact time-window boundary and limitations.
+
+The model CLI requires separately prepared labeled training and holdout CSVs. Both have the 13 base columns (`player_id`, `currency`, `as_of_utc`, plus ten documented features) and `label`, `label_available_at_utc`. These labels must come from an independently documented source. Training refuses shared players, late training labels and nonchronological cohorts. Its JSON report contains aggregate proxy metrics only. See the [research protocol](docs/research_protocol.md) for the full validation boundary.
+
+After an approved model artifact exists, the local API runs with `ANTE_MODEL_PATH=models/payment_review_model.json .venv/bin/uvicorn ante.api:app --host 127.0.0.1 --port 8000`. It exposes one business endpoint, `POST /assess`, accepting a timezone-aware `as_of` and canonical payment `events`. It returns per-player **relative review scores**, not diagnoses, calibrated risk probabilities or automatic decisions. The API has no authentication and must remain local until access control, threat review and deployment controls are designed.
 
 ## Prerequisites
 
@@ -53,7 +90,7 @@ The scripts in `ante/` are small CLIs built with [Typer](https://typer.tiangolo.
 
 ```sh
 python -m ante.modeling.train --help
-python -m ante.modeling.train --model-path models/experiment-1.pkl
+python -m ante.modeling.train --model-path models/payment_review_model.json
 ```
 
 Use `loguru.logger` for logging and `tqdm` for progress bars. `ante/config.py` sets them up to work together.
