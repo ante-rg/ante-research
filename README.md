@@ -11,6 +11,7 @@ This public README is the annotated contents page for the group portfolio. Jurij
 | Proposal | Group proposal, problem, initial research, scope, plan | Independently reviewed local draft; team number and submission pending |
 | Research protocol | [Question, data gate, point-in-time features and evaluation rules](docs/research_protocol.md) | Draft; no outcome labels confirmed |
 | Work plan | [Milestones, Gantt and risk register](docs/project_plan.md) | Draft; team and Moodle dates pending |
+| Roadmap | [Five planned work packages and adaptation of the teaching example](docs/roadmap.md), [live GitHub timeline](https://github.com/orgs/ante-rg/projects/1/views/3) | Planned dates through 15 Dec; not completion evidence |
 | Project charter | [Purpose, scope, roles, acceptance and decision gates](docs/project_charter.md) | Working draft; data and course confirmation pending |
 | Data management | [Access, provenance, privacy and publication plan](docs/data_management_plan.md) | Draft; private data access not confirmed |
 | Data pipeline | [`ante/dataset.py`](ante/dataset.py), [`ante/payment_schema.py`](ante/payment_schema.py), [synthetic tests](tests/test_data.py) | Prototype; validates a prepared canonical CSV |
