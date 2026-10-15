@@ -4,11 +4,11 @@ This is a research prototype for **human review** of potential gambling-related 
 
 ## Portfolio contents and evidence status
 
-This public README is the annotated contents page for the group portfolio. The course team number, members, roles and contribution shares are **pending confirmation**; no individual contribution is attributed here yet. Evidence links will be added as work is completed.
+This public README is the annotated contents page for the group portfolio. Jurijs has confirmed the five team members and their planned roles below. The course team number and contribution shares are **pending**; no individual contribution is attributed here yet. Evidence links will be added as work is completed.
 
 | Area | Evidence and purpose | Current status |
 | --- | --- | --- |
-| Proposal | Group proposal, problem, initial research, scope, plan | Team-reviewed local draft; submission and team metadata pending |
+| Proposal | Group proposal, problem, initial research, scope, plan | Independently reviewed local draft; team number and submission pending |
 | Research protocol | [Question, data gate, point-in-time features and evaluation rules](docs/research_protocol.md) | Draft; no outcome labels confirmed |
 | Work plan | [Milestones, Gantt and risk register](docs/project_plan.md) | Draft; team and Moodle dates pending |
 | Data management | [Access, provenance, privacy and publication plan](docs/data_management_plan.md) | Draft; private data access not confirmed |
@@ -19,7 +19,7 @@ This public README is the annotated contents page for the group portfolio. The c
 | Team process | [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), [iteration log](docs/iteration_log.md), review notes and feedback | Board exists; log is a blank template |
 | Final analysis | Results, failure cases, limitations and recommendations | Pending data and tests |
 
-**Team metadata:** team number `TBC`; names/roles `TBC`; verified contribution shares `TBC`. The team should record dated reviews and actual work before filling these fields. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
+**Team metadata:** team number `TBC`; verified contribution shares `TBC`. The planned roles reported by Jurijs are: Jurijs Kaminskis — product owner; Arturs Greķe — data engineer; Volodymyr Stishkovskyi — software developer and ML engineer; Andrejs Fjodorovs and Daniils Buts — data scientists. The reported course approval for a five-member team needs a course record. The team should record dated reviews and actual work before filling contribution shares. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
 
 ## Reproducible prototype
 
