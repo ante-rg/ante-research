@@ -45,7 +45,7 @@ Assignments above are a working division, not evidence of completed individual w
 | Planned point | Decision or deliverable | Evidence status |
 | --- | --- | --- |
 | 16 Oct 2026 | Proposal submission after team review | Draft prepared; Moodle deadline and receipt pending |
-| 23 Oct 2026 | Data and label decision; freeze feasible research route | Owner permission reported; dataset, schema and labels pending |
+| 23 Oct 2026 | Data and label decision; freeze feasible research route | Owner reports permission under customer terms; agreement clause, dataset, schema and labels pending |
 | 6 Nov 2026 | Ingestion, data quality and exploratory evidence | Prototype code exists; real-data quality evidence pending |
 | 20 Nov 2026 | Indicators, rules baseline and evaluation protocol | Prototype features exist; empirical baseline pending |
 | 4 Dec 2026 | Conditional model comparison and analyst demonstration | Local model/API prototype exists; labels and UI pending |
@@ -57,7 +57,7 @@ The assessment specification also lists a conflicting overall cover-page date an
 
 ## Data and ethics gate
 
-Jurijs reports that, as the casino owner, he permits educational use of a dataset that he will anonymise. This report alone does not complete the data-use gate. Before loading operator data, document the team's right to process it and any applicable course or ethics approval, then record the actual fields, de-identification method, permitted purpose, access list, storage location, retention and deletion rule. Keep raw data and player-level outputs outside the public repositories. Record whether any label is independently assessed, what it means, who assigned it, when it became available, and which players were eligible for review. Unreviewed players are not assumed negative. If representative labels are absent, use only descriptive indicators and software scenarios.
+Jurijs reports that, as the casino owner, he permits educational use of a dataset that he will anonymise, and that the casino's customer agreement allows him to use and transfer gameplay information at his discretion. The relevant clause and jurisdiction have not been supplied or independently reviewed. Before loading operator data, record that clause, the team's right to process the specific dataset and any applicable course or ethics approval, then record the actual fields, de-identification method, permitted purpose, access list, storage location, retention and deletion rule. Keep raw data and player-level outputs outside the public repositories. Record whether any label is independently assessed, what it means, who assigned it, when it became available, and which players were eligible for review. Unreviewed players are not assumed negative. If representative labels are absent, use only descriptive indicators and software scenarios.
 
 The team will document false-positive and false-negative costs, selection bias, temporal leakage, subgroup limitations, re-identification risk and automation bias. A human specialist must interpret any review score. Nothing in this charter authorises deployment against live players.
 
@@ -72,6 +72,6 @@ The team will document false-positive and false-negative costs, selection bias, 
 ## Open decisions
 
 1. Confirm the course team number, five-member approval record and Moodle deadlines.
-2. Receive the anonymised event schema and document permission, data handling and deletion.
+2. Receive the customer-agreement clause and jurisdiction, then the proposed de-identified event schema; document the specific data-use right, handling and deletion.
 3. Decide whether independently assessed labels exist and freeze the outcome definition and holdout plan.
-4. Confirm task owners, actual contribution recording and meeting-note location with the team.
+4. Confirm task owners and actual contribution recording with the team. Meeting notes are kept in this GitHub repository by Jurijs's choice.

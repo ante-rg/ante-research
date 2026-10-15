@@ -2,7 +2,7 @@
 
 ## Data inventory and access gate
 
-No operator data or representative harm labels have been confirmed. The candidate [public payments dataset](https://doi.org/10.17632/9j5gcygnwg.1) is licensed CC BY 4.0, but its obfuscated customer keys and transaction histories remain potentially linkable. Record its exact downloaded version, checksum, dictionary and attribution before analysis. The project must not ingest private operator data without documented permission, purpose, fields, access list, storage location and retention/deletion decision.
+No operator data or representative harm labels have been received or inspected. Jurijs reports that the casino's customer agreement permits use and transfer of gameplay information at his discretion; the clause and jurisdiction have not yet been reviewed for this dataset. The candidate [public payments dataset](https://doi.org/10.17632/9j5gcygnwg.1) is licensed CC BY 4.0, but its obfuscated customer keys and transaction histories remain potentially linkable. Record its exact downloaded version, checksum, dictionary and attribution before analysis. The project must not ingest private operator data until the applicable permission and course/ethics requirements, purpose, fields, access list, storage location and retention/deletion decision are documented.
 
 ## Storage and publication
 
