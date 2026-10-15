@@ -6,7 +6,11 @@ This is an empty evidence template. Add only meetings, decisions and work that a
 
 | Member | Confirmed role | Dates active | Linked contributions | Verified share basis |
 | --- | --- | --- | --- | --- |
-| Pending team confirmation | Pending | Pending | Pending | Pending |
+| Jurijs Kaminskis | Product owner (reported by Jurijs) | Pending | Pending | Pending |
+| Arturs Greķe | Data engineer (reported by Jurijs) | Pending | Pending | Pending |
+| Volodymyr Stishkovskyi | Software and ML engineer (reported by Jurijs) | Pending | Pending | Pending |
+| Andrejs Fjodorovs | Data scientist (reported by Jurijs) | Pending | Pending | Pending |
+| Daniils Buts | Data scientist (reported by Jurijs) | Pending | Pending | Pending |
 
 ## Iterations
 
@@ -22,7 +26,7 @@ This is an empty evidence template. Add only meetings, decisions and work that a
 
 ## Submission checks
 
-- [ ] Confirm team number, members, roles and contribution shares with the team.
+- [ ] Confirm team number, planned roles and contribution shares with the team; retain the course approval record for five members.
 - [ ] Confirm proposal, portfolio, reflection and viva dates in Moodle.
 - [ ] Link a submitted proposal and its receipt.
 - [ ] Link data provenance, permission, schema, quality report and evaluation protocol.

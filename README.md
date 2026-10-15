@@ -11,12 +11,13 @@ This public README is the annotated contents page for the group portfolio. Jurij
 | Proposal | Group proposal, problem, initial research, scope, plan | Independently reviewed local draft; team number and submission pending |
 | Research protocol | [Question, data gate, point-in-time features and evaluation rules](docs/research_protocol.md) | Draft; no outcome labels confirmed |
 | Work plan | [Milestones, Gantt and risk register](docs/project_plan.md) | Draft; team and Moodle dates pending |
+| Project charter | [Purpose, scope, roles, acceptance and decision gates](docs/project_charter.md) | Working draft; data and course confirmation pending |
 | Data management | [Access, provenance, privacy and publication plan](docs/data_management_plan.md) | Draft; private data access not confirmed |
 | Data pipeline | [`ante/dataset.py`](ante/dataset.py), [`ante/payment_schema.py`](ante/payment_schema.py), [synthetic tests](tests/test_data.py) | Prototype; validates a prepared canonical CSV |
 | Feature pipeline | [`ante/features.py`](ante/features.py), [boundary tests](tests/test_features.py) | Prototype; 7/30-day payment counts and amounts |
 | Model and evaluation | [`ante/modeling`](ante/modeling), [synthetic tests](tests/test_modeling.py) | Working prototype; empirical evaluation pending permitted labels |
 | API and app | [Single local API endpoint](ante/api.py), [synthetic API tests](tests/test_api.py), [ante-app](https://github.com/ante-rg/ante-app) | API prototype works locally; separate UI pending |
-| Team process | [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), [iteration log](docs/iteration_log.md), review notes and feedback | Board exists; log is a blank template |
+| Team process | [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), [iteration log](docs/iteration_log.md), [meeting notes and template](docs/meetings/README.md), review notes and feedback | All 18 cards have descriptions; no actual meeting note or contribution log yet |
 | Final analysis | Results, failure cases, limitations and recommendations | Pending data and tests |
 
 **Team metadata:** team number `TBC`; verified contribution shares `TBC`. The planned roles reported by Jurijs are: Jurijs Kaminskis — product owner; Arturs Greķe — data engineer; Volodymyr Stishkovskyi — software developer and ML engineer; Andrejs Fjodorovs and Daniils Buts — data scientists. The reported course approval for a five-member team needs a course record. The team should record dated reviews and actual work before filling contribution shares. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
