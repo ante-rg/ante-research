@@ -15,7 +15,7 @@ Research code for early prediction of addictive player behavior in responsible g
 - Log with `loguru.logger`, not `print`. Use `tqdm` for progress bars.
 - Read configuration and secrets from environment variables (loaded from `.env` on import of `ante`). When adding one, also add a placeholder to `.env.example`.
 
-## Data and models
+## Data and Models
 
 - Treat `data/raw` as read-only. Write derived data to `data/interim` or `data/processed`.
 - Never commit anything under `data/` or `models/`. Only the `.gitkeep` files are tracked.
@@ -26,6 +26,6 @@ Research code for early prediction of addictive player behavior in responsible g
 - Name notebooks `<number>-<initials>-<description>.ipynb`, e.g. `1.0-db-initial-data-exploration.ipynb`.
 - Start them with `%load_ext autoreload` and `%autoreload 2` so changes to `ante` are picked up.
 
-## Before finishing a task
+## Before Finishing a Task
 
 Run `make format`, `make lint`, and `make test`, and report any failures rather than hiding them.

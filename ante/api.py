@@ -31,7 +31,7 @@ class AssessmentRequest(BaseModel):
 def create_app(model_path: Path | None = None) -> FastAPI:
     """Create the single-endpoint prototype with an explicit local model path."""
     app = FastAPI(
-        title="ANTE review-score prototype",
+        title="Ante review-score prototype",
         docs_url=None,
         redoc_url=None,
         openapi_url=None,

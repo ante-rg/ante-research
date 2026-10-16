@@ -1,45 +1,6 @@
-# ANTE research: indicators of gambling-related harm
+# Ante Research
 
-This is a research prototype for **human review** of potential gambling-related harm. It does not diagnose addiction, make account decisions, or claim to reduce harm. Payment-event summaries are descriptive; predictive evaluation requires permitted, defensible outcome labels.
-
-## Portfolio contents and evidence status
-
-This public README is the annotated contents page for the group portfolio. Jurijs has confirmed the five team members and their planned roles below. The course team number and contribution shares are **pending**; no individual contribution is attributed here yet. Evidence links will be added as work is completed.
-
-| Area | Evidence and purpose | Current status |
-| --- | --- | --- |
-| Proposal | Group proposal, problem, initial research, scope, plan | Independently reviewed local draft; team number and submission pending |
-| Research protocol | [Question, data gate, point-in-time features and evaluation rules](docs/research_protocol.md) | Draft; no outcome labels confirmed |
-| Work plan | [Milestones, Gantt and risk register](docs/project_plan.md) | Draft; team and Moodle dates pending |
-| Roadmap | [Five planned work packages and adaptation of the teaching example](docs/roadmap.md), [live GitHub timeline](https://github.com/orgs/ante-rg/projects/1/views/3) | Planned dates through 15 Dec; not completion evidence |
-| Project charter | [Purpose, scope, roles, acceptance and decision gates](docs/project_charter.md) | Working draft; data and course confirmation pending |
-| Data management | [Access, provenance, privacy and publication plan](docs/data_management_plan.md) | Draft; private data access not confirmed |
-| Data pipeline | [`ante/dataset.py`](ante/dataset.py), [`ante/payment_schema.py`](ante/payment_schema.py), [synthetic tests](tests/test_data.py) | Prototype; validates a prepared canonical CSV |
-| Feature pipeline | [`ante/features.py`](ante/features.py), [boundary tests](tests/test_features.py) | Prototype; 7/30-day payment counts and amounts |
-| Model and evaluation | [`ante/modeling`](ante/modeling), [synthetic tests](tests/test_modeling.py) | Working prototype; empirical evaluation pending permitted labels |
-| API and app | [Single local API endpoint](ante/api.py), [synthetic API tests](tests/test_api.py), [ante-app](https://github.com/ante-rg/ante-app) | API prototype works locally; separate UI pending |
-| Team process | [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), [iteration log](docs/iteration_log.md), [meeting notes and template](docs/meetings/README.md), review notes and feedback | All 18 cards have descriptions; no actual meeting note or contribution log yet |
-| Final analysis | Results, failure cases, limitations and recommendations | Pending data and tests |
-
-**Team metadata:** team number `TBC`; verified contribution shares `TBC`. The planned roles reported by Jurijs are: Jurijs Kaminskis — product owner; Arturs Greķe — data engineer; Volodymyr Stishkovskyi — software developer and ML engineer; Andrejs Fjodorovs and Daniils Buts — data scientists. The reported course approval for a five-member team needs a course record. The team should record dated reviews and actual work before filling contribution shares. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
-
-## Reproducible prototype
-
-The canonical input is a prepared CSV with `event_id,player_id,event_time,event_type,amount,currency`. Timestamps must carry a UTC offset; `event_type` is `deposit` or `withdrawal`; amounts are positive. The source-specific mapping and permission decision must precede import of any external dataset.
-
-```sh
-make requirements
-.venv/bin/python -m ante.dataset --input-path data/raw/payment_events.csv --output-path data/processed/payment_events.csv
-.venv/bin/python -m ante.features --input-path data/processed/payment_events.csv --output-path data/processed/payment_features.csv --as-of 2026-10-15T00:00:00Z
-make lint
-make test
-```
-
-Individual-level outputs stay in ignored local `data/` paths. The current model prototype requires a **single-currency cohort** and independently supplied labels; a mixed-currency feature file must be split before training or prediction. See the [research protocol](docs/research_protocol.md) for the exact time-window boundary and limitations.
-
-The model CLI requires separately prepared labeled training and holdout CSVs. Both have the 13 base columns (`player_id`, `currency`, `as_of_utc`, plus ten documented features) and `label`, `label_available_at_utc`. These labels must come from an independently documented source. Training refuses shared players, late training labels and nonchronological cohorts. Its JSON report contains aggregate proxy metrics only. See the [research protocol](docs/research_protocol.md) for the full validation boundary.
-
-After an approved model artifact exists, the local API runs with `ANTE_MODEL_PATH=models/payment_review_model.json .venv/bin/uvicorn ante.api:app --host 127.0.0.1 --port 8000`. It exposes one business endpoint, `POST /assess`, accepting a timezone-aware `as_of` and canonical payment `events`. It returns per-player **relative review scores**, not diagnoses, calibrated risk probabilities or automatic decisions. The API has no authentication and must remain local until access control, threat review and deployment controls are designed.
+Notebooks, experiments, and model training for early prediction of addictive player behavior in responsible gambling.
 
 ## Prerequisites
 
