@@ -1,4 +1,4 @@
-# ANTE roadmap and Data Driven Scrum adaptation
+# Ante Roadmap and Data Driven Scrum Adaptation
 
 The [GitHub Project Roadmap](https://github.com/orgs/ante-rg/projects/1/views/3) shows **planned** work packages. Its Start date and Target date fields do not indicate completion. The same project retains the [Kanban view](https://github.com/orgs/ante-rg/projects/1/views/1) for the 18 detailed work cards. A work package is a summary item that links to its detailed cards; it is not a duplicate claim of completed work.
 
@@ -12,7 +12,7 @@ The [GitHub Project Roadmap](https://github.com/orgs/ante-rg/projects/1/views/3)
 
 These windows follow the [project plan](project_plan.md) and the proposal. The portfolio date of 15 December is taken from the assessment table but still requires Moodle confirmation because the specification has conflicting dates. The proposal, individual reflections and viva are separate assessment items, not absorbed into the WP5 bar.
 
-The supplied *Data Driven Scrum: A Worked Example for Responsible Gambling* explicitly describes a **fictional** case. It has 11 overlapping iterations across 10 weeks, with Create, Observe and Analyze decisions and a four-week analyst pilot. We use its questions and cadence as an illustration: source/label and basic data in WP1–WP2; trends, friction indicators and rules in WP3 only if the fields exist; API, dashboard and explanations in WP4; critical analysis and model documentation in WP5. We do not treat its fictional metrics, analyst reviews, chat-text data or pilot as ANTE evidence or commitments.
+The supplied *Data Driven Scrum: A Worked Example for Responsible Gambling* explicitly describes a **fictional** case. It has 11 overlapping iterations across 10 weeks, with Create, Observe and Analyze decisions and a four-week analyst pilot. We use its questions and cadence as an illustration: source/label and basic data in WP1–WP2; trends, friction indicators and rules in WP3 only if the fields exist; API, dashboard and explanations in WP4; critical analysis and model documentation in WP5. We do not treat its fictional metrics, analyst reviews, chat-text data or pilot as Ante evidence or commitments.
 
 If the example's first working day were mapped to Monday 19 October 2026, its day-49 demonstration would be Thursday 24 December, after the planned portfolio deadline. The current proposal and project plan therefore use five planned work packages ending 15 December, subject to team review and Moodle deadline confirmation. A live pilot would require a documented and approved study protocol, representative labels, participants and time beyond this assessed prototype; none are evidenced yet.
 

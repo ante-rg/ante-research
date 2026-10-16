@@ -1,8 +1,8 @@
-# ANTE iteration and team evidence log
+# Ante Iteration and Team Evidence Log
 
 This is an empty evidence template. Add only meetings, decisions and work that actually happened. Link each entry to its Kanban card, commit, test, analysis and reviewer feedback. Keep private data out of this public file.
 
-## Team and roles
+## Team and Roles
 
 | Member | Confirmed role | Dates active | Linked contributions | Verified share basis |
 | --- | --- | --- | --- | --- |
@@ -18,13 +18,13 @@ This is an empty evidence template. Add only meetings, decisions and work that a
 | --- | --- | --- | --- | --- | --- | --- |
 | Pending | Pending | Pending | Pending | Pending | Pending | Pending |
 
-## Feedback and decisions
+## Feedback and Decisions
 
 | Date | Source of feedback | Finding | Team response | Evidence link | Owner |
 | --- | --- | --- | --- | --- | --- |
 | Pending | Pending | Pending | Pending | Pending | Pending |
 
-## Submission checks
+## Submission Checks
 
 - [ ] Confirm team number, planned roles and contribution shares with the team; retain the course approval record for five members.
 - [ ] Confirm proposal, portfolio, reflection and viva dates in Moodle.

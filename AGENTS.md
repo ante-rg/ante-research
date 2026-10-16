@@ -2,6 +2,11 @@
 
 Research code for early prediction of addictive player behavior in responsible gambling: notebooks, experiments, and model training. See `README.md` for setup, commands, and project layout.
 
+## Naming
+
+- Write the project name as "Ante", never "ANTE". It is not an acronym: the name plays on the gambling "ante" (the stake placed before a hand) and "ante" as in "before", for the early prediction this project is about.
+- Lowercase `ante` is still correct for code identifiers such as the package name, and `ANTE_` stays as the prefix for environment variables (e.g. `ANTE_MODEL_PATH`).
+
 ## Environment
 
 - Use the project's virtual environment. Run commands through `make` (run `make` alone to list targets) or call `.venv/bin/python` directly. Never use the system Python or install packages globally.
@@ -15,7 +20,7 @@ Research code for early prediction of addictive player behavior in responsible g
 - Log with `loguru.logger`, not `print`. Use `tqdm` for progress bars.
 - Read configuration and secrets from environment variables (loaded from `.env` on import of `ante`). When adding one, also add a placeholder to `.env.example`.
 
-## Data and models
+## Data and Models
 
 - Treat `data/raw` as read-only. Write derived data to `data/interim` or `data/processed`.
 - Never commit anything under `data/` or `models/`. Only the `.gitkeep` files are tracked.
@@ -26,6 +31,6 @@ Research code for early prediction of addictive player behavior in responsible g
 - Name notebooks `<number>-<initials>-<description>.ipynb`, e.g. `1.0-db-initial-data-exploration.ipynb`.
 - Start them with `%load_ext autoreload` and `%autoreload 2` so changes to `ante` are picked up.
 
-## Before finishing a task
+## Before Finishing a Task
 
 Run `make format`, `make lint`, and `make test`, and report any failures rather than hiding them.

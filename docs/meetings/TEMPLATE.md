@@ -1,4 +1,4 @@
-# ANTE meeting on YYYY-MM-DD about TOPIC
+# Ante Meeting on YYYY-MM-DD about TOPIC
 
 **Status:** draft until participants review.  
 **Date, time and time zone:**  
@@ -7,7 +7,7 @@
 **Note taker:**  
 **Linked Kanban cards and pull requests:**
 
-## Purpose and inputs
+## Purpose and Inputs
 
 State the question to resolve and link only public-safe pre-read material. Do not paste player records or private operational data.
 
@@ -31,7 +31,7 @@ If no decision was reached, say so explicitly.
 | --- | --- | --- | --- | --- |
 | | | | | Pending |
 
-## Risks, feedback and next review
+## Risks, Feedback and Next Review
 
 Record a changed assumption, new risk or external feedback with its source. State what will be checked at the next review. Do not mark actions complete here until evidence exists in the linked card.
 

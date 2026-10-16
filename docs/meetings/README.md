@@ -1,4 +1,4 @@
-# ANTE meeting notes
+# Ante Meeting Notes
 
 The team keeps meeting notes here in the existing GitHub repository so decisions, actions and contributions can link directly to the [Kanban board](https://github.com/orgs/ante-rg/projects/1/views/1), code and pull requests. Use one file per actual meeting, named `YYYY-MM-DD-topic.md`, copied from [the template](TEMPLATE.md). Do not create a dated note before the meeting occurs.
 

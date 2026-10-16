@@ -1,8 +1,8 @@
-# ANTE research: indicators of gambling-related harm
+# Ante Research: Indicators of Gambling-Related Harm
 
 This is a research prototype for **human review** of potential gambling-related harm. It does not diagnose addiction, make account decisions, or claim to reduce harm. Payment-event summaries are descriptive; predictive evaluation requires permitted, defensible outcome labels.
 
-## Portfolio contents and evidence status
+## Portfolio Contents and Evidence Status
 
 This public README is the annotated contents page for the group portfolio. Jurijs has confirmed the five team members and their planned roles below. The course team number and contribution shares are **pending**; no individual contribution is attributed here yet. Evidence links will be added as work is completed.
 
@@ -23,7 +23,7 @@ This public README is the annotated contents page for the group portfolio. Jurij
 
 **Team metadata:** team number `TBC`; verified contribution shares `TBC`. The planned roles reported by Jurijs are: Jurijs Kaminskis — product owner; Arturs Greķe — data engineer; Volodymyr Stishkovskyi — software developer and ML engineer; Andrejs Fjodorovs and Daniils Buts — data scientists. The reported course approval for a five-member team needs a course record. The team should record dated reviews and actual work before filling contribution shares. No private player row, individual prediction, credential or unapproved operator data belongs in this repository.
 
-## Reproducible prototype
+## Reproducible Prototype
 
 The canonical input is a prepared CSV with `event_id,player_id,event_time,event_type,amount,currency`. Timestamps must carry a UTC offset; `event_type` is `deposit` or `withdrawal`; amounts are positive. The source-specific mapping and permission decision must precede import of any external dataset.
 
@@ -86,7 +86,7 @@ Every `make` command uses the project's `.venv` directly. Activate it explicitly
 
 ## Working on the Project
 
-### Pipeline scripts
+### Pipeline Scripts
 
 The scripts in `ante/` are small CLIs built with [Typer](https://typer.tiangolo.com/). Input and output paths have defaults but can be overridden:
 
@@ -112,13 +112,13 @@ Use `loguru.logger` for logging and `tqdm` for progress bars. `ante/config.py` s
 
 Start Jupyter with `jupyter lab` from the activated venv, or select `.venv` as the kernel in your editor.
 
-### Paths and configuration
+### Paths and Configuration
 
 - Use the paths from `ante.config` (`RAW_DATA_DIR`, `MODELS_DIR`, etc.) instead of hardcoding them. They resolve relative to the project root, so they work from scripts and notebooks alike.
 - Put secrets and machine-specific settings in `.env`. Importing `ante` loads it into `os.environ`.
 - When you add a new variable, also add it with a placeholder value to `.env.example`.
 
-### Data and models
+### Data and Models
 
 - Contents of `data/` and `models/` are not committed to Git. Only the folder structure is.
 - Treat `data/raw` as read-only. Write transformed data to `data/interim` or `data/processed`.
@@ -130,7 +130,7 @@ Add packages to `pyproject.toml`, then run `make requirements`:
 - `dependencies` for anything the code or notebooks use.
 - `[project.optional-dependencies] dev` for development tools (testing, linting).
 
-### Before committing
+### Before Committing
 
 ```sh
 make format

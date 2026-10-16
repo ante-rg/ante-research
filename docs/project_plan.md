@@ -1,4 +1,4 @@
-# ANTE work plan and risk register (draft)
+# Ante Work Plan and Risk Register (Draft)
 
 This plan supports the course portfolio. Dates follow the proposal draft and remain subject to Moodle verification. Assigned people, meetings and outcomes will be recorded only after the team confirms them.
 
@@ -14,7 +14,7 @@ This plan supports the course portfolio. Dates follow the proposal draft and rem
 
 ```mermaid
 gantt
-    title ANTE planned work packages (2026)
+    title Ante Planned Work Packages (2026)
     dateFormat YYYY-MM-DD
     axisFormat %d %b
     section Governance
@@ -29,13 +29,13 @@ gantt
     WP5 evaluation and portfolio :2026-12-05, 11d
 ```
 
-## Decision gates
+## Decision Gates
 
 1. By 23 October, record the team, data owner, permitted fields, outcome-label provenance, storage location and retention decision. If labels are unavailable, use the descriptive feasibility route and state that a predictive claim is untested.
 2. Before training, freeze the cohort, prediction time, label meaning and availability, outcome horizon, review capacity and holdout split. No held-out or later event may feed an earlier feature.
 3. Before public release, check all text, code, charts and screenshots for individual player data, small cells, credentials and unsupported effectiveness claims.
 
-## Risks and responses
+## Risks and Responses
 
 | Risk | Trigger/evidence to watch | Response | Decision owner |
 | --- | --- | --- | --- |
