@@ -99,6 +99,12 @@ make lint
 make test
 ```
 
+## Research Documentation
+
+- [TSI-100-v1 Data Description](docs/data-description.md)
+- [Literature-to-Data Comparison](docs/literature-to-data-comparison.md)
+- [Feature Readiness and Exploratory Analysis Plan](docs/feature-readiness-and-exploratory-analysis-plan.md)
+
 ## Project Organization
 
 The layout follows [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org/) (v2) as a reference.
