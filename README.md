@@ -53,7 +53,7 @@ The scripts in `ante/` are small CLIs built with [Typer](https://typer.tiangolo.
 
 ```sh
 python -m ante.modeling.train --help
-python -m ante.modeling.train --model-path models/payment_review_model.json
+python -m ante.modeling.train --model-path models/experiment-1.pkl
 ```
 
 Use `loguru.logger` for logging and `tqdm` for progress bars. `ante/config.py` sets them up to work together.

@@ -5,12 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ante"
 version = "0.0.1"
-description = "Research prototype for time-aware indicators of gambling-related harm and human review."
+description = "Notebooks, experiments, and model training for early prediction of addictive player behavior in responsible gambling."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 dependencies = [
-    "fastapi",
     "ipython",
     "jupyterlab",
     "loguru",
@@ -22,12 +21,10 @@ dependencies = [
     "scikit-learn",
     "tqdm",
     "typer",
-    "uvicorn",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "httpx",
     "pytest",
     "ruff",
 ]
