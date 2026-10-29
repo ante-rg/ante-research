@@ -1,7 +1,7 @@
 # Literature-to-Data Comparison for TSI-100-v1
 
-**Status:** targeted narrative synthesis, 28 October 2026
-**Scope:** papers linked from research issues #2, #3, #4, and #11 in the group repository. This is not a systematic review. The summaries separate each paper's measured outcome from the project's proposed harm-risk target.
+**Status:** targeted narrative synthesis, 28 October 2026; updated 29 October 2026 with issues #5 and #6
+**Scope:** papers linked from research issues #2, #3, #4, #5, #6, and #11 in the group repository. This is not a systematic review. The summaries separate each paper's measured outcome from the project's proposed harm-risk target.
 
 The proposed feature checks and next research actions are summarized in the [Feature Readiness and Exploratory Analysis Plan](feature-readiness-and-exploratory-analysis-plan.md).
 
@@ -13,7 +13,8 @@ The issue references do not all study the same outcome:
 |---|---|---|
 | Future voluntary self-exclusion (VSE) | A player later chooses or activates an exclusion tool. | A clinical diagnosis, severe harm, or a regulator-confirmed need to suspend play. A person may self-exclude for reasons other than gambling harm, and some people experiencing harm may not self-exclude. |
 | Self-reported PGSI / problem-gambling screen | The player reports symptoms or consequences on a questionnaire. | A clinical diagnosis by itself; responses may also be selective or incomplete. |
-| Operator/manual responsible-gambling risk assessment | Staff classify a flagged account under one operator's procedures. | An independent ground truth if the same behaviors also feed the model or influenced who was reviewed. |
+| Operator/manual responsible-gambling risk assessment or alert | Staff classify a flagged account, or an operator's alert system flags it, under one operator's procedures. | An independent ground truth if the same behaviors also feed the model or influenced who was reviewed or flagged. |
+| Account closure attributed to gambling problems | The player closes the account and gives gambling problems as the reason. | A clinical diagnosis or a complete record of harm; players who close for other reasons, or do not close at all, may also be experiencing harm. |
 
 This distinction matters for the proposed green/yellow/orange/red scale. None of the attached papers validates those four colors as universal levels. Most train or report a binary outcome, and their outcomes cannot be pooled as though they were interchangeable labels for addiction.
 
@@ -101,9 +102,67 @@ Source: [Finkenwirth et al. (2021), International Gambling Studies](https://doi.
 
 Source: [Percy et al. (2016), International Gambling Studies](https://doi.org/10.1080/14459795.2016.1151913).
 
+### LaBrie & Shaffer (2011): betting patterns of players who closed accounts over gambling problems
+
+**Question and design.** A secondary analysis of the first two years of a longitudinal bwin cohort of 47,134 Internet sports-betting subscribers. Of these, 679 closed their accounts and gave a reason. The authors compared closers who cited gambling problems with closers who gave other reasons.
+
+**Findings reported in the abstract and later summaries.** About half of the closers who cited gambling problems formed a distinct, homogeneous group. Compared with other closers, they placed more and larger bets, bet more frequently, and were more likely to bet intensively soon after enrollment. The pattern was confirmed on an independent sample of closers. The original article's full text was not available in the source check for this synthesis, so group sizes and effect sizes are intentionally omitted.
+
+**Transfer to TSI-100-v1.** Bets per active day can be computed from completed rounds by bet placement time. The early-intensity finding also supports comparing players at the same time since their first event.
+
+**Limits here.** The outcome is a self-reported closure reason, and the comparison group is other closers rather than active players. The population is sports betting, while our dataset is casino play, so absolute bet counts per day are not comparable. The study describes early tenure, not a look-back window before a dated event.
+
+Source: [LaBrie & Shaffer (2011), Addiction Research & Theory](https://doi.org/10.3109/16066359.2010.512106).
+
+### Gray, LaPlante & Shaffer (2012): players who triggered operator responsible-gambling alerts
+
+**Question and design.** The study compared 2,066 bwin subscribers who triggered the operator's responsible-gambling alert system with 2,066 controls who had the same amount of exposure to the service. It used discriminant function analysis on actual gambling records.
+
+**Findings reported in the abstract.** Indices of gambling intensity, such as total number of bets and number of bets per betting day, best distinguished cases from controls, particularly for live-action sports betting. Control players behaved similarly to the operator's wider player population. The full text was not available in the source check for this synthesis.
+
+**Transfer to TSI-100-v1.** This is the closest precedent for H5: bets per active day compared against controls matched on exposure, which our design approximates by matching on brand and time since first event.
+
+**Limits here.** The outcome is an operator alert, not an independent harm measure. The abstract does not say what triggered the alerts; if activity volume contributed, the intensity result is partly circular. The same risk applies to our own labels if they come from an operator process.
+
+Source: [Gray, LaPlante & Shaffer (2012), Psychology of Addictive Behaviors](https://doi.org/10.1037/a0028545).
+
+### UK Gambling Commission (2023): customer interaction guidance for remote operators
+
+**What it is.** Formal guidance under Social Responsibility Code 3.4.3, in force from 31 October 2023 and last updated in October 2024. Requirement 5 sets the minimum categories of indicators of harm that remote operators must monitor. Time spent gambling is one category, and time of day, "for example late night", is listed within it. The guidance states that "a higher percentage of overnight gamblers were found to be problem gamblers, than during other times of day".
+
+**Transfer to TSI-100-v1.** This is the operational source of the night-time marker in H4. A result on our data is useful either way, because operators are already expected to monitor this indicator.
+
+**Limits here.** This is regulation, not an evaluation of the marker. It does not define night hours, give a threshold, or cite the study behind the overnight claim. It does not show that a night-time share predicts a dated harm event.
+
+Source: [UK Gambling Commission, Customer interaction guidance for remote gambling licensees, Requirement 5](https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-5-customer-interaction-guidance-for-remote-gambling-licensees-sr).
+
+### McAuliffe et al. (2022): industry "Markers of Harm" in two cohorts of sports bettors
+
+**Question and design.** The study evaluated nine "Markers of Harm" that a consortium of gambling companies had committed to using to estimate the risk of gambling-related harm. Late-night play is one of the nine. Each marker is scored from 0 (no risk) to 3 (high risk). The markers were tested in two independent cohorts of online sports bettors collected ten years apart.
+
+**Findings reported in the abstract and later summaries.** Over two years, most users never reached an overall score high enough to indicate an intervention. The most active users were more likely to exceed the thresholds. The authors suggest this may reflect lower-risk samples, but also overly high thresholds or flaws in the design of some markers. Delfabbro et al. (2024) summarize that most markers predicted the study's proxies for higher-risk gambling and cite the paper as support for late-night play. The full text was not available in the source check for this synthesis, so the late-night marker's own result has not been verified here.
+
+**Transfer to TSI-100-v1.** The closest published test of late-night play as a stand-alone marker in account data.
+
+**Limits here.** Sports betting, where late-night activity partly reflects which events are on offer; casino play is available at any hour. The markers come from an industry scoring scheme with arbitrary thresholds, and the outcomes are proxies.
+
+Source: [McAuliffe et al. (2022), Journal of Gambling Studies](https://doi.org/10.1007/s10899-021-10097-0).
+
+### Delfabbro, Parke & Catania (2024): review of behavioral tracking studies
+
+**Question and design.** A narrative review of studies that use objective account data from online operators. It groups behavioral indicators into categories: gambling intensity, variability, trajectories over time, anomalies in timing (play at night or on weekdays rather than weekends), self-recognized risk such as exclusions and account closures, and product risk.
+
+**Findings.** The review concludes that late-night gambling "appears to be generally supported" as an indicator of higher-risk gambling, citing Forrest & McHale (2022) and McAuliffe et al. (2022). Its rationale is that people with less control over their gambling may play at night to hide it, or because they cannot stop.
+
+**Transfer to TSI-100-v1.** Supports H4 as a recognized indicator category and places it next to the intensity markers in H5.
+
+**Limits here.** The evidence for the timing category is thin: one of the two cited studies (Forrest & McHale, 2022) reports that bet levels are higher late at night, which describes play rather than linking it to harm. The review does not identify a study showing that the share of night-time play predicts a dated harm event on its own.
+
+Source: [Delfabbro, Parke & Catania (2024), Journal of Gambling Studies](https://doi.org/10.1007/s10899-023-10247-6).
+
 ## 2A. Additional literature found for the observable TSI signals
 
-These papers were found in a targeted follow-up search. They were not linked from the four issues covered above. They add evidence on self-reported outcomes, loss-chasing definitions, and the limits of event-based interpretations.
+These papers were found in a targeted follow-up search. They were not linked from the issues covered above. They add evidence on self-reported outcomes, loss-chasing definitions, and the limits of event-based interpretations.
 
 ### Hopfgartner et al. (published online 2024): self-reported PGSI across three countries
 
@@ -153,13 +212,13 @@ The literature points to several feature families. Their presence in the archive
 
 | Candidate family | TSI-available ingredients | Initial feature candidates | Main caveat |
 |---|---|---|---|
-| Play frequency and pace | Completed rounds, player-action timestamps, session numbers | Bets per active day/session; active days; median and lower-quantile inter-bet gap; session duration and round count | Event rows include state/result rows; count completed rounds or player actions, not all event rows. |
+| Play frequency and pace | Completed rounds, player-action timestamps, session numbers | Bets per active day/session; active days; median and lower-quantile inter-bet gap; session duration and round count | Event rows include state/result rows; count completed rounds or player actions, not all event rows. Sessions start after a gap of more than one hour, so breaks between sessions are always longer than one hour and depend on that rule. |
 | Stakes and variability | `rounds.stake_eur`, account and session identifiers | Mean/median stake; IQR; standard deviation/CV; high-quantile stake; recent-to-personal-baseline ratio | Stakes are strongly skewed; absolute thresholds may reflect affordability, product, or project rather than harm. |
 | Bet trajectory | Bet timestamps and amounts over time | 7/30-day changes in rate and stake; robust slope; abrupt increase relative to an account's own baseline | 100 players are insufficient to establish stable population thresholds. |
 | Outcomes and apparent losses | `stake_eur`, `returned_eur`, result time and bet time | Net return/loss over a session or rolling window, using only results available by the prediction time | `bet_result_x` does not reconcile exactly with return/stake for all rounds; result time can occur after bet time. |
 | Depositing | Payment amount and category; observed event order/time | Deposit count and total in 7/30 days; deposits per session; amount distribution | Deposit timestamps are technical and not confirmed as actual behavior time; payment category semantics need review. |
 | Possible loss chasing | Betting losses/results and deposit events | Deposit after a confirmed low balance or loss; within-session top-up sequences | Cannot be validated now: balance is not verified own funds and deposit event time is uncertain. Do not implement H1 as if timestamps were authoritative. |
-| Time and product context | Local hour, weekday code, product and game codes | Night-time share, session timing, game/product variety | Time zone and weekday mapping are undocumented; project and exposure differences may dominate. |
+| Time and product context | Local hour, weekday code, product and game codes | Night-time share, session timing, game/product variety | Time zone and weekday mapping are undocumented; project and exposure differences may dominate. `local_hour` is on `events.parquet` but not on `rounds.parquet`. A share of bets is dominated by a few long night sessions; the share of active days with night play is less sensitive. Night play also rises with overall intensity, so report it alongside bets per active day. If all players in a brand share one clock, within-brand comparisons stay valid and only the meaning of "night" shifts. |
 
 Prefer features in both fixed windows (for example, 7 and 30 days) and personal change measures. A player betting €5 per round is not necessarily escalating; a sharp change from their own stable baseline may be more informative. This is a testable design choice, not a conclusion from the 100-player profile.
 
@@ -201,6 +260,7 @@ The existing issue #11 metric—recall among a 5% weekly review queue 7–30 day
 - Can the project obtain an independent harm-related label and the date when it became knowable? Who defines label severity and uncertainty?
 - Can the data owner confirm the behavior timestamp for deposits/withdrawals, the meaning of `balance_after_eur`, withdrawal cancellations, and the formula for `bet_result_x`?
 - Do we want one binary “needs review” prediction first, with severity as a later task? The literature does not justify four ordinal risk labels before labels and class counts are known.
+- Which time zone does `local_hour` use, how is daylight saving handled, and is it the same clock for all players within a brand?
 - Are the five project groups different operators/products or only sample strata? Which group-level fields can safely be used at prediction time, and what deployment transfer do we expect?
 
 ## References
@@ -212,6 +272,11 @@ The existing issue #11 metric—recall among a 5% weekly review queue 7–30 day
 - Braverman, J., & Shaffer, H. J. (2012). [How do gamblers start gambling: identifying behavioural markers for high-risk internet gambling](https://doi.org/10.1093/eurpub/ckp232). *European Journal of Public Health*.
 - Finkenwirth, S., et al. (2021). [Using machine learning to predict self-exclusion status in online gamblers on the PlayNow.com platform in British Columbia](https://doi.org/10.1080/14459795.2020.1832132). *International Gambling Studies*.
 - Percy, C., et al. (2016). [Predicting online gambling self-exclusion: an analysis of the performance of supervised machine learning models](https://doi.org/10.1080/14459795.2016.1151913). *International Gambling Studies*.
+- LaBrie, R., & Shaffer, H. J. (2011). [Identifying behavioral markers of disordered Internet sports gambling](https://doi.org/10.3109/16066359.2010.512106). *Addiction Research & Theory*.
+- Gray, H. M., LaPlante, D. A., & Shaffer, H. J. (2012). [Behavioral characteristics of Internet gamblers who trigger corporate responsible gambling interventions](https://doi.org/10.1037/a0028545). *Psychology of Addictive Behaviors*.
+- Gambling Commission. (2023). [Customer interaction guidance for remote gambling licensees (formal guidance under SR Code 3.4.3), Requirement 5](https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/requirement-5-customer-interaction-guidance-for-remote-gambling-licensees-sr).
+- McAuliffe, W. H. B., et al. (2022). [Using "markers of harm" to track risky gambling in two cohorts of online sports bettors](https://doi.org/10.1007/s10899-021-10097-0). *Journal of Gambling Studies*.
+- Delfabbro, P., Parke, J., & Catania, M. (2024). [Behavioural tracking and profiling studies involving objective data derived from online operators: A review of the evidence](https://doi.org/10.1007/s10899-023-10247-6). *Journal of Gambling Studies*.
 - Murch, W. S., et al. (2023). [Using machine learning to retrospectively predict self-reported gambling problems in Quebec](https://doi.org/10.1111/add.16179). *Addiction*.
 - Auer, M., & Griffiths, M. D. (online 2022). [An empirical attempt to operationalize chasing losses in gambling utilizing account-based player tracking data](https://doi.org/10.1007/s10899-022-10144-4). *Journal of Gambling Studies*.
 - Hopfgartner, N., et al. (online 2024). [Using artificial intelligence algorithms to predict self-reported problem gambling among online casino gamblers from different countries using account-based player data](https://doi.org/10.1007/s11469-024-01312-1). *International Journal of Mental Health and Addiction*.
@@ -222,4 +287,6 @@ The existing issue #11 metric—recall among a 5% weekly review queue 7–30 day
 - [Issue #2 — loss-chasing deposits](https://github.com/ante-rg/ante-research/issues/2)
 - [Issue #3 — seven-day deposit activity](https://github.com/ante-rg/ante-research/issues/3)
 - [Issue #4 — mean stake and variability](https://github.com/ante-rg/ante-research/issues/4)
+- [Issue #5 - night-time betting](https://github.com/ante-rg/ante-research/issues/5)
+- [Issue #6 - betting intensity](https://github.com/ante-rg/ante-research/issues/6)
 - [Issue #11 — gradient boosting vs rule-based baseline](https://github.com/ante-rg/ante-research/issues/11)
